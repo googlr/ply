@@ -52,9 +52,9 @@ To enable a directory/project to use ply, simply run `init` from within the dire
 Ok, I Want It!
 --------------
 
-1. Download the tar file [ply.tar](https://s3.amazonaws.com/ply-buildtool/ply.tar) or the zip file [ply.zip](https://s3.amazonaws.com/ply-buildtool/ply.zip)
+Download the tar file [ply.tar](https://s3.amazonaws.com/ply-buildtool/ply.tar) or the zip file [ply.zip](https://s3.amazonaws.com/ply-buildtool/ply.zip)
 
-2. Un-package the tar/zip file to a directory of your choosing (say `/opt/ply`) and then make sure the following properties are set as environmental variables:
+Un-package the tar/zip file to a directory of your choosing (say `/opt/ply`) and then make sure the following properties are set as environmental variables:
 * Use command `tar -C /opt/ply -xvf your_download_path/ply.tar` to extract the files.
 
 * `JAVA_HOME` -> (likely already set by your distro) set to the home directory of the java installation
