@@ -52,15 +52,29 @@ To enable a directory/project to use ply, simply run `init` from within the dire
 Ok, I Want It!
 --------------
 
-Download the tar file [ply.tar](https://s3.amazonaws.com/ply-buildtool/ply.tar) or the zip file [ply.zip](https://s3.amazonaws.com/ply-buildtool/ply.zip)
+1. Download the tar file [ply.tar](https://s3.amazonaws.com/ply-buildtool/ply.tar) or the zip file [ply.zip](https://s3.amazonaws.com/ply-buildtool/ply.zip)
 
-Un-package the tar/zip file to a directory of your choosing (say `/opt/ply`) and then make sure the following properties are set as environmental variables:
+2. Un-package the tar/zip file to a directory of your choosing (say `/opt/ply`) and then make sure the following properties are set as environmental variables:
+* Use command `tar -C /opt/ply -xvf your_download_path/ply.tar` to extract the files.
 
 * `JAVA_HOME` -> (likely already set by your distro) set to the home directory of the java installation
 
 * `PLY_HOME` -> set to the directory of where ever you untar-ed ply (i.e., `/opt/ply`).
 
 Finally add `${PLY_HOME}/bin` to your `$PATH`
+
+To successfully install `ply`, make sure that `JAVA_HOME` and `PLY_HOME` are properly added to your environmental variables. For Mac OS users, you shall add following code snippets to `~/.bash_profile`. Note that your `JAVA_HOME` depends on the jdk directory on your machine and could be different.
+``` bash
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# ply
+export PLY_HOME=/opt/ply
+export PATH=${PLY_HOME}/bin:$PATH
+
+```
+Refer to [change the PATH system variable](https://www.java.com/en/download/help/path.xml) for more details.
 
 __Bash Tab Completion__ (i.e., readline support)
 
